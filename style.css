@@ -1,0 +1,43 @@
+/**
+    Overiding bootstrap style
+    */
+
+    @import "./content-style.css";
+
+    :root{
+        --navbar-height: 56px;
+        --footer-height: 72px;
+    }
+
+    html,body{
+        height: 100%;
+    }
+    body{
+        background: rgb(189, 223, 247);
+    }
+
+    .custom-bs-navbar{
+        background: white;
+        min-height: var(--navbar-height);
+
+    }
+    .my-footer{
+        background: palevioletred;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: var(--footer-height);
+        background: rgb(29, 119, 192);
+        padding: 24px 24px;
+    }
+    .my-footer address{
+        color: whitesmoke;
+        margin: auto;
+    }
+
+    .content-section{
+        min-height: calc(100% - var(--navbar-height) - var(--footer-height));
+    }
+
+   
